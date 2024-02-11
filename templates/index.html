@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caesar Cipher</title>
+  </head>
+  <body>
+    <h1>Caesar Cipher</h1>
+    <form method="post" action="/">
+      <label for="text">Enter text:</label>
+      <input type="text" id="text" name="text" required />
+      <br />
+      <label for="shift">Enter shift value:</label>
+      <input type="number" id="shift" name="shift" required />
+      <br />
+      <label for="operation">Select operation:</label>
+      <select id="operation" name="operation">
+        <option value="encrypt">Encrypt</option>
+        <option value="decrypt">Decrypt</option>
+      </select>
+      <br />
+      <button type="submit">Perform Operation</button>
+    </form>
+    {% if text %}
+    <p>Original Text: {{ text }}</p>
+    <p>Shift Value: {{ shift }}</p>
+    <p>Operation: {{ operation }}</p>
+    <p>Result Text: {{ result_text }}</p>
+    {% endif %}
+  </body>
+</html>
